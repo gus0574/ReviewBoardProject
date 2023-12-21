@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/eclipse,java
-# Edit at https://www.toptal.com/developers/gitignore?templates=eclipse,java
+# Created by https://www.toptal.com/developers/gitignore/api/java,eclipse
+# Edit at https://www.toptal.com/developers/gitignore?templates=java,eclipse
 
 ### Eclipse ###
 .metadata
@@ -14,18 +14,14 @@ local.properties
 .loadpath
 .recommenders
 
+### dotenv ###
+.env
+
 # External tool builders
 .externalToolBuilders/
 
 # Locally stored "Eclipse launch configurations"
 *.launch
-
-# dotenv environment variable files
-.env
-.env.development.local
-.env.test.local
-.env.production.local
-.env.local
 
 # PyDev specific (Python IDE for Eclipse)
 *.pydevproject
@@ -100,4 +96,4 @@ local.properties
 hs_err_pid*
 replay_pid*
 
-# End of https://www.toptal.com/developers/gitignore/api/eclipse,java
+# End of https://www.toptal.com/developers/gitignore/api/java,eclipse

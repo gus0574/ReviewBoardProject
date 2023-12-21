@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>reviewsite</name>
-	<comment>Project ReviewBoardProject created by Buildship.</comment>
+	<name>ReviewBoard_backend</name>
+	<comment>Project ReviewBoard_backend created by Buildship.</comment>
 	<projects>
 	</projects>
 	<buildSpec>
