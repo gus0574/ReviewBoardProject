@@ -1,10 +1,10 @@
-package com.ldh.web.reviewsite;
+package com.ldh.web.reviewboard;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ReviewsiteApplicationTests {
+class ReviewBoardBackendApplicationTests {
 
 	@Test
 	void contextLoads() {
