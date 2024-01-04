@@ -4,25 +4,27 @@ import java.time.LocalDateTime;
 
 public class PostVO {
 	
-	private String post_id;
-	private String user_id;
+	// 카멜케이스로 작성 
+	private String postId;
+	private String userId;
 	private String status;
 	private String category;
 	private String title;
 	private String content;
-	private int like_count;
-	private int dislike_count;
-	private int view_count;
-	private char attached_file_yn;
-	private char notice_yn;
-	private LocalDateTime created_time;
-	private LocalDateTime updated_time;
+	private int likeCount;
+	private int dislikeCount;
+	private int viewCount;
+	private char attachedFileYn;
+	private char noticeYn;
+	private char deleteYn;
+	private LocalDateTime createdTime;
+	private LocalDateTime updatedTime;
 	
-	public String getPost_id() {
-		return post_id;
+	public String getPostId() {
+		return postId;
 	}
-	public String getUser_id() {
-		return user_id;
+	public String getUserId() {
+		return userId;
 	}
 	public String getStatus() {
 		return status;
@@ -36,26 +38,29 @@ public class PostVO {
 	public String getContent() {
 		return content;
 	}
-	public int getLike_count() {
-		return like_count;
+	public int getLikeCount() {
+		return likeCount;
 	}
-	public int getDislike_count() {
-		return dislike_count;
+	public int getDislikeCount() {
+		return dislikeCount;
 	}
-	public int getView_count() {
-		return view_count;
+	public int getViewCount() {
+		return viewCount;
 	}
-	public char getAttached_file_yn() {
-		return attached_file_yn;
+	public char getAttachedFileYn() {
+		return attachedFileYn;
 	}
-	public char getNotice_yn() {
-		return notice_yn;
+	public char getNoticeYn() {
+		return noticeYn;
 	}
-	public LocalDateTime getCreated_time() {
-		return created_time;
+	public char getDeleteYn() {
+		return deleteYn;
 	}
-	public LocalDateTime getUpdated_time() {
-		return updated_time;
+	public LocalDateTime getCreatedTime() {
+		return createdTime;
 	}
-	
+	public LocalDateTime getUpdatedTime() {
+		return updatedTime;
+	}
+
 }
