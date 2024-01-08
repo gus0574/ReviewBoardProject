@@ -1,11 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
-import HomepageComponent from './components/homepage/HomepageComponent';
+import ReviewApp from './components/ReviewApp';
 
 function App() {
   return (
     <div className="App">
-      <HomepageComponent/>
+      <ReviewApp/>
     </div>
   );
 }
