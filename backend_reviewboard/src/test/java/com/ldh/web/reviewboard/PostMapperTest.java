@@ -50,6 +50,16 @@ public class PostMapperTest {
         }
 	}
 	
+	@Test
+	void findAll() {
+		List<PostVO> boardList = boardMapper.findAll();
+		
+		for(PostVO post : boardList) {
+//			System.out.println(post.getPostId() + post.getUserId() + post.getCategory() + post.getTitle() + post.getContent());
+			System.out.println(post.toString());
+		}
+	}
+	
     @Test
     void update() {
         // 1. 게시글 수정

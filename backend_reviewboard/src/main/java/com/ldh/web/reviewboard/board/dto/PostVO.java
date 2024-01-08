@@ -62,5 +62,14 @@ public class PostVO {
 	public LocalDateTime getUpdatedTime() {
 		return updatedTime;
 	}
-
+	
+	@Override
+	public String toString() {
+		return "PostVO [postId=" + postId + ", userId=" + userId + ", status=" + status + ", category=" + category
+				+ ", title=" + title + ", content=" + content + ", likeCount=" + likeCount + ", dislikeCount="
+				+ dislikeCount + ", viewCount=" + viewCount + ", attachedFileYn=" + attachedFileYn + ", noticeYn="
+				+ noticeYn + ", deleteYn=" + deleteYn + ", createdTime=" + createdTime + ", updatedTime=" + updatedTime
+				+ "]";
+	}
+	
 }

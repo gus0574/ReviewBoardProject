@@ -48,6 +48,17 @@ public class DatabaseConfig {
 		factoryBean.setConfiguration(MybatisConfig());
         return factoryBean.getObject();
     }
+    /** xml 형식
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+    	<property name="dataSource" ref="dataSource" />
+    	<property name="mapperLocations" value="classpath*:mappers/../.Mapper.xml" />
+    	<property name="configuration">
+    		<bean class="org.apache.ibatis.session.Configuration">
+      			<property name="mapUnderscoreToCamelCase" value="true"/>
+    		</bean>
+  		</property>
+    </bean>
+     **/
 
     //스프링이 properties의 MyBatis 설정을 불러올 수 있도록 Bean 생성
     @Bean
@@ -57,7 +68,11 @@ public class DatabaseConfig {
 		return new org.apache.ibatis.session.Configuration();
 	}
 
-	//SqlSessionFactory를 통해 생성되고 DB의 커밋, 롤백 등 SQL의 실행에 필요한 모든 메서드를 갖는 객체
+    /*
+     * SqlSessionFactory를 통해 생성되고 DB의 커밋, 롤백 등 SQL의 실행에 필요한 모든 메서드를 갖는 핵심모듈
+     * SqlSessionTemplate은 SqlSession을 구현하고 코드에서 SqlSession를 대체하는 역할을 한다.
+     * 스레드에 안전하고, 특정 시점에 세션을 닫고, 커밋하거나 롤백하는 것을 포함한 세션의 생명주기를 관리한다.
+     */
     @Bean
     public SqlSessionTemplate sqlSession() throws Exception {
         return new SqlSessionTemplate(sqlSessionFactory());

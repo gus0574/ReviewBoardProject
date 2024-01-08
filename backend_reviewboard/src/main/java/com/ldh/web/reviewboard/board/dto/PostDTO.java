@@ -9,6 +9,7 @@ public class PostDTO {
 	private String content;
 	private char attachedFileYn;
 	private char noticeYn;
+	private char deleteYn;
 	
 	public String getPostId() {
 		return postId;
@@ -52,11 +53,17 @@ public class PostDTO {
 	public void setNoticeYn(char noticeYn) {
 		this.noticeYn = noticeYn;
 	}
+	public char getDeleteYn() {
+		return noticeYn;
+	}
+	public void setDeleteYn(char deleteYn) {
+		this.deleteYn = deleteYn;
+	}
 	
 	@Override
 	public String toString() {
 		return "PostDTO [postId=" + postId + ", userId=" + userId + ", category=" + category + ", title=" + title
-				+ ", content=" + content + ", attachedFileYn=" + attachedFileYn + ", noticeYn=" + noticeYn + "]";
+				+ ", content=" + content + ", attachedFileYn=" + attachedFileYn + ", noticeYn=" + noticeYn + + deleteYn +"]";
 	}
 	
 }

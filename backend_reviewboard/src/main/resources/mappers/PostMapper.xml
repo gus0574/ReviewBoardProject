@@ -25,27 +25,32 @@
 	</sql>
 	
 	<!-- SQL 문 작성. 태그의 id는 Mapper 인터페이스의 메소드 명과 일치해야 함. -->
-	
 	<!-- 게시글 작성 -->
-	<insert id="save" parameterType="com.ldh.web.reviewboard.board.dto.PostDTO">
+  	<insert id="save" parameterType="com.ldh.web.reviewboard.board.dto.PostDTO">
+		<selectKey keyProperty="postId" order="BEFORE" resultType="java.lang.String">
+			SELECT fn_get_postid_seq() 
+			FROM DUAL
+		</selectKey>
+		
 		INSERT INTO ENTIRE_BOARD_TB(
 			<include refid="postColumns"/>
 		) VALUES (
-			/*#{post_id}*/ fn_get_postid_seq(),
-			/*#{user_id}*/	'admin',
-			/*status*/ 'use',
-			/*#{category}*/ 'category',
-			/*#{title}*/ 'testTitle',
-			/*#{content}*/ 'test 내용',
-			/*like_count*/ 0,
-			/*dislike_count*/ 0,
-			/*view_count*/ 0,
-			/*#{attached_file_yn}*/ 'n',
-			/*#{notice_yn}*/ 'n',
-			/*#{delete_yn}*/ 'n',
+			/*postId*/		#{postId},
+			/*userId*/		#{userId},
+			/*status*/ 		'use',
+			/*category*/	#{category},
+			/*title*/		#{title},
+			/*content*/		#{content},
+			/*like_count*/	0,
+			/*dislike_count*/	0,
+			/*view_count*/	0,
+			/*attachedFileYn*/	#{attachedFileYn},
+			/*noticeYn*/	#{noticeYn},
+			/*#{deleteYn}*/ 'n',
 			/*created_time*/ NOW(),
 			/*updated_time*/ NOW()
 		)
+		
 	</insert>
 	
 	<!-- 특정 게시글 조회 -->
